@@ -23,8 +23,8 @@ public class Week2 {
     public static int maximumSumSubArray(int[] A) {
         int result = A[0];
         for (int i = 0; i < A.length; i++) {
-            int subSum = A[i];
-            for (int x = i + 1; x < A.length; x++) {
+            int subSum = 0;
+            for (int x = i; x < A.length; x++) {
                 subSum += A[x];
                 if (subSum > result) {
                     result = subSum;

@@ -53,4 +53,12 @@ public class Week2Test {
         Assertions.assertEquals(13, result);
     }
 
+    @Test
+    void test_maximumSumSubArray_custom2() {
+        int[] arr = {-3, -1, 6, -7, 0};
+        int result = Week2.maximumSumSubArray(arr);
+
+        Assertions.assertEquals(6, result);
+    }
+
 }
