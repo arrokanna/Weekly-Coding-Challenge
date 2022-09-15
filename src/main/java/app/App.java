@@ -3,18 +3,23 @@ package app;
 import activities.Week1;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
 public class App {
 
     public static void main(String[] args) {
-        //calcPrims();
-        //calcPrimesV2();
-        //calcPrimesV3();
-        //calcPrimesV4();
-        calcPrimesV5();
+        List<Integer> test = new ArrayList<>(Arrays.asList(1,2,3,4));
+
+        System.out.println(test.stream().reduce((x,y) -> x*y));
+        int number = test.stream().mapToInt(Integer::intValue).reduce(1,(x,y) -> x*y);
+
+        System.out.println(number);
+
     }
+
+
 
     //0.3 second 100T
     //25 seconds 1M

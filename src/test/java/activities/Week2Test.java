@@ -1,8 +1,10 @@
+package activities;
+
 import activities.Week2;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class Week2Test {
+class Week2Test {
 
     @Test
     void test_largestGap_case1() {
