@@ -42,18 +42,18 @@ public class Week3 {
     public static List<Integer> sortDigits(List<Integer> A, String order) {
 
         for (int x = 0; x < A.size(); x++) {
-            List<Character> digits = A.get(x).toString().chars()
-                    .mapToObj(c -> (char) c)
-                    .collect(Collectors.toList());
-
             if (order.equalsIgnoreCase("asc")) {
-                A.set(x, Integer.parseInt(digits.stream().sorted()
+                A.set(x, Integer.parseInt(A.get(x).toString().chars()
+                        .mapToObj(c -> (char) c)
+                        .sorted()
                         .map(String::valueOf)
                         .collect(Collectors.joining())));
             }
 
             if (order.equalsIgnoreCase("desc")) {
-                A.set(x, Integer.parseInt(digits.stream().sorted(Comparator.reverseOrder())
+                A.set(x, Integer.parseInt(A.get(x).toString().chars()
+                        .mapToObj(c -> (char) c)
+                        .sorted(Comparator.reverseOrder())
                         .map(String::valueOf)
                         .collect(Collectors.joining())));
             }
